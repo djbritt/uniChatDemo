@@ -14021,23 +14021,23 @@ var Input = exports.Input = function (_React$Component) {
     }, {
         key: 'handleSubmit',
         value: function handleSubmit(event) {
-            if ($("#textarea").val().length < 160) {
-                console.log("The current message is!!! " + this.state.value);
-                //this emits to main.js
-                _Socket.Socket.emit('message', {
-                    data: this.state.value
-                });
+            // if($("#textarea").val().length < 160){
+            console.log("The current message is!!! " + this.state.value);
+            //this emits to main.js
+            _Socket.Socket.emit('message', {
+                data: this.state.value
+            });
 
-                // alert('A name was submitted: ' + this.state.value);
-                $("#textarea").val('');
-                event.preventDefault();
-                this.setState({
-                    count: 0
-                });
-            } else {
-                alert("Message must be shorter than 160 characters.");
-                event.preventDefault();
-            }
+            // alert('A name was submitted: ' + this.state.value);
+            $("#textarea").val('');
+            event.preventDefault();
+            this.setState({
+                count: 0
+            });
+            // } else {
+            //     alert("Message must be shorter than 160 characters.")
+            //     event.preventDefault();
+            // }
         }
     }, {
         key: 'render',
@@ -14053,12 +14053,6 @@ var Input = exports.Input = function (_React$Component) {
                         null,
                         React.createElement('input', { placeholder: 'Message...', id: 'textarea', type: 'text', onChange: this.handleChange })
                     )
-                ),
-                React.createElement(
-                    'div',
-                    { id: 'charCount' },
-                    this.state.count,
-                    '/160'
                 )
             );
         }
