@@ -1,0 +1,629 @@
+@font-face {
+    font-family: 'seguibl';
+    src: url('/css/seguibl.eot');
+    src: local('seguibl'),
+    url('/css/seguibl.woff') format('woff'),
+    url('/css/seguibl.ttf') format('truetype');
+}
+
+/* use this class to attach this font to any element i.e. <p class="fontsforweb_fontid_40310">Text with this font applied</p> */
+
+.segoe {
+    font-family: 'seguibl' !important;
+}
+
+html {
+    /*height: 100%;*/
+}
+
+body {
+    /*height: 100%;*/
+    /*background:radial-gradient(ellipse at center, rgba(179,179,179,1) 0%, rgba(0,0,0,1) 100%); /* w3c */
+    /*background-size: cover;*/
+    background-image: url("https://puu.sh/vbSbF/812ea52080.png");
+    background-repeat: repeat;
+}
+
+#record.backgroundRed {
+    background-color: red;
+}
+
+#record.backgroundBlue {
+    background-color: #006087;
+}
+
+#record.backgroundGray {
+    background-color: #545454;
+}
+
+#languageDropdown {
+    position: fixed;
+    right: 50px;
+    bottom: 55px;
+}
+
+#serverLanguageDropdown {
+    position: fixed;
+    right: 50px;
+    bottom: 25px;
+}
+
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, .5);
+    -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+}
+
+#commands {
+    position: fixed;
+    top: 325px;
+    bottom: 100px;
+    border-radius: 5px;
+    left: 60px;
+    width: 165px;
+    height: 370px;
+    overflow-y: auto;
+    color: white;
+    font-family: 'seguibl' !important;
+    font-size: 15px;
+}
+
+#commandBackground {
+    position: fixed;
+    top: 320px;
+    height: 379px;
+    border-radius: 5px;
+    left: 50px;
+    width: 175px;
+    border-style: solid;
+    background-color: rgba(255, 255, 255, 0.03);
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+#otherBackground {
+    position: fixed;
+    top: 420px;
+    bottom: 140px;
+    border-radius: 5px;
+    left: 50px;
+    width: 175px;
+    border-style: solid;
+    background-color: rgba(255, 255, 255, 0.03);
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.container {
+    /*position: relative;*/
+    /*border: 5px solid red;*/
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.03);
+    border-radius: 7px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.3);
+    overflow-y: scroll;
+    overflow-x: hidden;
+    top: 100px;
+    bottom: 100px;
+    left: 240px;
+    right: 50px;
+}
+
+#title {
+    color: white;
+    position: absolute;
+    left: 250px;
+    top: 0px;
+    font-size: 40px;
+}
+
+#charCount {
+    position: fixed;
+    bottom: 10px;
+    right: 346px;
+    color: white;
+    font-size: 12px;
+    font-family: 'seguibl' !important;
+}
+
+/*@media*/
+
+/*1165*/
+
+/*fix subtitle screen issue*/
+
+@media only screen and (max-width: 1165px) {
+    body {
+        background-color: lightblue;
+    }
+}
+
+#subtitle {
+    color: white;
+    position: absolute;
+    left: 415px;
+    top: 22px;
+    font-size: 20px;
+}
+
+#translateFromBox {
+    position: absolute;
+    color: white;
+    font-family: 'seguibl' !important;
+    font-size: 15px;
+    right: 180px;
+    bottom: 58px;
+}
+
+#reactId {
+    padding-top: 20px;
+    color: white;
+}
+
+#translateToBox {
+    position: absolute;
+    color: white;
+    font-size: 15px;
+    font-family: 'seguibl' !important;
+    right: 180px;
+    bottom: 28px;
+}
+
+#talkToBotBox {
+    position: fixed;
+    bottom: 48px;
+    right: 330px;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    padding-right: 19px;
+    padding-left: 20px;
+    font-size: 15px;
+    font-family: 'seguibl' !important;
+}
+
+#loginText {
+    flex: 0 0 65%;
+
+    /*position: absolute;*/
+    font-size: 30px;
+    font-family: 'seguibl' !important;
+    color: white;
+    top: -5px;
+    right: 200px;
+}
+
+#banner {
+    position: fixed;
+    height: 60px;
+    background-color: #181818;
+    width: 100%;
+    margin-top: -10px;
+    margin-left: -10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+#inputArea {
+    position: fixed;
+    height: 45px;
+    bottom: 30px;
+    left: 285px;
+    right: 344px;
+}
+
+#textarea {
+    width: 100%;
+    height: 45px;
+    color: white;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: #545454;
+    box-sizing: border-box;
+    margin: 0;
+    border: 0;
+}
+
+input {
+    width: 80%;
+    margin: 0;
+    border: 0;
+    padding: 6px;
+    background: #e5ecff;
+    font: italic 12px Trebuchet MS;
+    box-sizing: border-box;
+}
+
+#dropdown {
+    text-align: center;
+    position: fixed;
+    right: 50px;
+    bottom: 47px
+}
+
+#serverLangDropdown {
+    text-align: center;
+    position: fixed;
+    right: 50px;
+    bottom: 20px
+}
+
+#userCount {
+    position: fixed;
+    top: 100px;
+    left: 50px;
+    width: 155px;
+    height: 200px;
+    overflow-y: auto;
+    padding-left: 20px;
+    color: white;
+    background-color: #006087;
+    border-radius: 5px;
+    font-size: 15px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    margin-left: 0px;
+    border-width: 1px;
+    font-family: 'seguibl' !important;
+}
+
+#toggleButton {
+    position: fixed;
+    right: 415px;
+    bottom: 30px;
+    height: 25px;
+    width: 45px;
+}
+
+#mic {
+    position: absolute;
+    bottom: 13px;
+    left: 280px;
+    right: 346px;
+}
+
+.sound {
+    display: none;
+}
+
+.sound-wave {
+    /*width: 100px;*/
+    width: 100%;
+    height: 55px;
+}
+
+#record {
+    position: fixed;
+    bottom: 30px;
+    left: 240px;
+    height: 45px;
+    width: 45px;
+    transition: all 0.2s ease-out;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all all 0.2s ease-out;
+    -o-transition: all all 0.2s ease-out;
+    background-size: cover;
+    background-color: #545454;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    position: fixed;
+    right: 415px;
+    bottom: 30px;
+    height: 25px;
+    width: 45px;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #545454;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #006087;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #006087;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    transform: translateX(20px);
+}
+
+/* Rounded sliders */
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+#messages {
+    color: white;
+    padding-bottom: 10px;
+    margin-left: -40px;
+    margin-top: -10px;
+    font-family: 'Lato', sans-serif;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0px;
+}
+
+#message {
+    color: white;
+    margin-top: -10px;
+    border-bottom-style: solid;
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.1);
+    font-family: 'Lato', sans-serif;
+}
+
+#messageText {
+    position: relative;
+    left: 70px;
+    margin-bottom: 10px;
+}
+
+#messageName {
+    margin-top: 15px;
+    margin-bottom: 2px;
+    font-weight: bold;
+    font-size: 20px;
+    position: relative;
+    left: 70px;
+}
+
+#messageImage {
+    position: absolute;
+    left: 15px;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+
+#logout {
+    /*position: fixed;*/
+    right: 30%;
+}
+
+#buttons {
+    display: flex;
+    top: 13px;
+    right: -67px;
+}
+
+#login {
+    margin-left: -45% !important;
+}
+
+.loginBtn {
+    /*float: left;*/
+    flex: 1;
+    box-sizing: border-box;
+    /*position: relative;*/
+    /*width: 13em;   */
+    margin: 0.2em;
+    border: none;
+    text-align: left;
+    line-height: 34px;
+    white-space: nowrap;
+    border-radius: 0.2em;
+    font-size: 16px;
+    color: #FFF;
+}
+
+.loginBtn:before {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 100%;
+}
+
+.loginBtn:focus {
+    outline: none;
+}
+
+.loginBtn:active {
+    box-shadow: inset 0 0 0 32px rgba(0, 0, 0, 0.1);
+}
+
+.loginBtn--facebook {
+    background-color: #4C69BA;
+    background-image: linear-gradient(#4C69BA, #3B55A0);
+    text-shadow: 0 -1px 0 #354C8C;
+    position: absolute;
+    right: 56px;
+    top: -6px;
+    width: 40px;
+    height: 40px;
+    background-image: url("https://puu.sh/vswuG/f06c739a98.png");
+    background-color: #3B5998;
+    background-size: 40px;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all all 0.2s ease-out;
+    -o-transition: all all 0.2s ease-out;
+}
+
+.loginBtn--facebook:before {}
+
+.loginBtn--facebook:hover,
+.loginBtn--facebook:focus {
+    background-color: #637BAD;
+}
+
+.loginBtn--google {
+    /*font-family: "Roboto", Roboto, arial, sans-serif;*/
+    background: #DD4B39;
+    position: absolute;
+    right: 120px;
+    top: -6px;
+    width: 40px;
+    height: 40px;
+    background-image: url('https://puu.sh/vswqp/045cb1180d.png');
+    background-size: 40px;
+    background-color: #DD4E38;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all all 0.2s ease-out;
+    -o-transition: all all 0.2s ease-out;
+}
+
+.loginBtn--google:before {}
+
+.loginBtn--google:hover,
+.loginBtn--google:focus {
+    background-color: #EDA195;
+    background-size: 40px;
+}
+
+#wide {
+    width: 100%;
+}
+
+/* -------------------- Select Box Styles: bavotasan.com Method (with special adaptations by ericrasch.com) */
+
+/* -------------------- Source: http://bavotasan.com/2011/style-select-box-using-only-css/ */
+
+/*.styled-select {*/
+
+/*    -moz-appearance: window;*/
+
+/*    appearance: none;*/
+
+/*    -webkit-background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0;*/
+
+/*    -moz-background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0;*/
+
+/*    background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0;*/
+
+/*    height: 29px;*/
+
+/*overflow: hidden;*/
+
+/*    width: 120px;*/
+
+/*    font-family: 'seguibl' !important;*/
+
+/*}*/
+
+.styled-select select {
+    border: none;
+    font-size: 14px;
+    height: 29px;
+    padding: 5px;
+    width: 120px;
+    font-family: 'seguibl' !important;
+    background-color: #006087;
+    -webkit-background-color: #006087;
+    -moz-background-color: #006087;
+    color: #fff;
+}
+
+/* -------------------- Rounded Corners */
+
+.rounded {
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+}
+
+.semi-square {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+/* old 
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font: 13px Helvetica, Arial;
+    }
+
+    form {
+      background: #000;
+      padding: 3px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    form input {
+      border: 0;
+      padding: 10px;
+      width: 90%;
+      margin-right: .5%;
+    }
+
+    form button {
+      width: 9%;
+      background: rgb(130, 224, 255);
+      border: none;
+      padding: 10px;
+    }
+
+    #messages {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      margin-bottom: 39px !important;
+    }
+
+    #messages li {
+      padding: 5px 10px;
+    }
+
+    #messages li:nth-child(odd) {
+      background: #eee;
+    }
+  </style>
+  
+  */

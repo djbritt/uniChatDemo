@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Universal Translator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/css/styles.css">
+  <meta name="google-signin-client_id" content="703008667276-1rpnklaqheune3k0kgtp8btaifg88rh0.apps.googleusercontent.com">
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <link rel="shortcut icon" type="image/x-icon" href="https://puu.sh/vreyG/7bfe81b3ce.ico">
+  <script src="static/audiodisplay.js"></script>
+  <script src="static/recorder.js"></script>
+  <script src="static/recorderWorker.js"></script>
+  <!--<script src="/socket.io/socket.io.js"></script>-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script>
+    function timeStamp() {
+      var now = new Date();
+      var date = [now.getMonth() + 1, now.getFullYear()];
+      var time = [now.getHours(), now.getMinutes()];
+      var suffix = (time[0] < 12) ? "AM" : "PM";
+      time[0] = (time[0] < 12) ? time[0] : time[0] - 12;
+      time[0] = time[0] || 12;
+      for (var i = 1; i < 3; i++) {
+        if (time[i] < 10) {
+          time[i] = "0" + time[i];
+        }
+      }
+      // Return the formatted string
+      return date.join("/") + " " + time.join(":") + " " + suffix;
+    }
+  </script>
+</head>
+
+<body>
+  <div id="banner">
+
+  </div>
+  <!-- Needed for fb login -->
+  <div id="fb-root"></div>
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId: '166731107295676', // App ID 166731107295676 heroku key
+        status: true, // check login status
+        cookie: true, // enable cookies to allow the server to access the session
+        xfbml: true // parse XFBML
+      });
+      console.log("LOADED")
+    };
+    // Load the SDK Asynchronously
+    (function(d) {
+      var js, id = 'facebook-jssdk',
+        ref = d.getElementsByTagName('script')[0];
+      if (d.getElementById(id)) { return; }
+      js = d.createElement('script');
+      js.id = id;
+      js.async = true;
+      js.src = "//connect.facebook.net/en_US/all.js";
+      ref.parentNode.insertBefore(js, ref);
+    }(document));
+  </script>
+  <div id="translateFromBox">YOUR LANGUAGE: </div>
+  <!--<div id="translateToBox">TRANSLATE TO: </div>-->
+  <div id="commandBackground"></div>
+  <div id="commands"><span style='font-size: 20px'>TIPS</span><br><br> This is just a test app. The full functionality allows for group translation, in up to 75 languages, with voice or text input. The test functionality is Google login, and a chat room. I programmed it
+    myself for my bachelor degree graduation project. To see a demo presentation of the full app, contact <a style='color: white' href='mailto:admin@djbritt.com'>admin@djbritt.com</a>.<br><br> Do Not refresh while logged in.
+  </div>
+  <div id="userCount"></div>
+  <!--<div id="toggleButton"></div>-->
+  <div id="languageDropdown" class="styled-select blue semi-square"></div>
+  <div id="serverLanguageDropdown" class="styled-select blue semi-square"></div>
+
+  <div id="buttons"></div>
+  <div class="container">
+    <div id="messages"></div>
+  </div>
+  <span id="title" class="segoe">UniChat</span>
+  <span id="subtitle" class="segoe">A universal chatroom for up to 75 languages.</span>
+  <div id="reactId"></div>
+  <div id="mic"></div>
+  <script type="text/javascript" src="/static/script.js"></script>
+  <script src="https://apis.google.com/js/platform.js?onload=gButton" async defer></script>
+</body>
+
+</html>
